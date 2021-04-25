@@ -1,0 +1,115 @@
+/*主体*/
+.IndDk {
+  position: relative;
+  width: 100%;
+}
+/*title*/
+.title {
+  position: relative;
+}
+.title h3 {
+  color: #111;
+  font-weight: 550;
+}
+.WenH {
+  display: block;
+  background-size: 100%;
+  background-image: url("../../assets/images/WenHao.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.titleN,
+.AdmN {
+  color: #545454;
+  box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  position: absolute;
+  background: #fff;
+  display: none;
+  z-index: 99;
+}
+.titleN span,
+.AdmN span {
+  color: #1c1c1c;
+  font-weight: 550;
+}
+/*左边*/
+.searchK {
+  background: #fff;
+}
+.searchI {
+  height: 100%;
+  display: block;
+  background-image: url("../../assets/images/search.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.IndSeaI {
+  color: #2a2a2a;
+  background: none;
+  border: none;
+}
+.titAcc {
+  display: block;
+  margin-left: auto;
+  text-decoration: underline;
+}
+.IndDD {
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+}
+.IndAcca {
+  color: #232323;
+  position: relative;
+}
+.IndAcca p {
+  position: relative;
+}
+.IndAcca p:before {
+  display: block;
+  content: "";
+  position: absolute;
+  background: #dcdcdc;
+  border-radius: 50%;
+}
+.IndAcca span {
+  color: #6a6a6a;
+  display: block;
+}
+.IndAccI {
+  background: #d2d2d2;
+  display: block;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  margin-right: auto;
+}
+.IndAcca .CloRed:before {
+  display: none;
+}
+.IndAccBut p {
+  color: #7c7c7c;
+}
+.IndAccJ {
+  display: block;
+  background-image: url("../../assets/images/Jiao01.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.IndAccOn .IndAccJ {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transition: 0.5s;
+}
+.IndAccN {
+  transition: 0.5s;
+  height: auto;
+}
+.IndAccNo {
+  overflow: hidden;
+  transition: 0.5s;
+}

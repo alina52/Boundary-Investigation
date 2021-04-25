@@ -1,0 +1,461 @@
+/*header*/
+.header {
+  z-index: 110;
+  background: #ca2420;
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: #fff;
+  width: 98%;
+  padding: 0 1%;
+}
+.Logo {
+  display: block;
+  margin-right: 1%;
+}
+.LogoN {
+  font-weight: 550;
+}
+.menu {
+  margin-left: 3%;
+}
+.menua {
+  color: #fff;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.menua:before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  background: #fff;
+  width: 0;
+  transition: 0.5s;
+}
+.menu .on {
+  font-weight: 550;
+}
+.menu .on:before,
+.menua:hover:before {
+  transition: 0.5s;
+}
+.hduser {
+  margin-left: auto;
+  position: relative;
+}
+.hduserA {
+  color: #fff;
+}
+.hduserA:hover {
+  text-decoration: underline;
+}
+.hdTanH {
+  display: block;
+  background-image: url("../../assets/images/TanHao.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.hdTanN {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+}
+.hdTanNr {
+  background: #fff;
+}
+.hdTanNr h3 {
+  color: #060606;
+  font-weight: 550;
+}
+.hdTanNp p {
+  position: relative;
+  color: #707070;
+}
+.hdTanNp p:before {
+  display: block;
+  content: "";
+  position: absolute;
+  background: #959595;
+  border-radius: 50%;
+}
+@media screen and (min-width: 1680px) {
+  body {
+    font-size: 16px;
+  }
+  /*header*/
+  .header {
+    height: 69px;
+  }
+  .Logo {
+    width: 130px;
+    height: 41px;
+  }
+  .LogoN {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .menua {
+    line-height: 69px;
+    width: 115px;
+    font-size: 18px;
+  }
+  .menua:before {
+    height: 5px;
+    border-radius: 3px;
+  }
+  .menu .on {
+    font-size: 20px;
+  }
+  .menu .on:before,
+  .menua:hover:before {
+    width: 50px;
+  }
+  .hduser {
+    height: 69px;
+    font-size: 18px;
+  }
+  .hduser p {
+    line-height: 30px;
+  }
+  .hduserA {
+    line-height: 30px;
+  }
+  .hdTanH {
+    width: 19px;
+    height: 19px;
+    margin-left: 10px;
+  }
+  .hdTanN {
+    padding-top: 10px;
+  }
+  .hdTanNr {
+    width: 186px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  }
+  .hdTanNr h3 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .hdTanNp {
+    padding: 3px 0 5px;
+  }
+  .hdTanNp p {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 16px;
+  }
+  .hdTanNp p:before {
+    left: 4px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+  }
+}
+@media screen and (max-width: 1679px) and (min-width: 1400px) {
+  body {
+    font-size: 14px;
+  }
+  /*header*/
+  .header {
+    height: 61px;
+  }
+  .Logo {
+    width: 115px;
+    height: 37px;
+  }
+  .LogoN {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .menua {
+    line-height: 61px;
+    width: 110px;
+    font-size: 17px;
+  }
+  .menua:before {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .menu .on {
+    font-size: 19px;
+  }
+  .menu .on:before,
+  .menua:hover:before {
+    width: 44px;
+  }
+  .hduser {
+    height: 61px;
+  }
+  .hduser p {
+    line-height: 30px;
+    font-size: 17px;
+  }
+  .hduserA {
+    line-height: 30px;
+    font-size: 17px;
+  }
+  .hdTanH {
+    width: 17px;
+    height: 17px;
+    margin-left: 8px;
+  }
+  .hdTanN {
+    padding-top: 10px;
+  }
+  .hdTanNr {
+    width: 186px;
+    padding: 11px 18px;
+    border-radius: 6px;
+    box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  }
+  .hdTanNr h3 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .hdTanNp {
+    padding: 3px 0 5px;
+  }
+  .hdTanNp p {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 16px;
+  }
+  .hdTanNp p:before {
+    left: 4px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+  }
+}
+@media screen and (max-width: 1399px) and (min-width: 1280px) {
+  body {
+    font-size: 12px;
+  }
+  /*header*/
+  .header {
+    height: 55px;
+  }
+  .Logo {
+    width: 100px;
+    height: 33px;
+  }
+  .LogoN {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .menua {
+    line-height: 55px;
+    width: 105px;
+    font-size: 16px;
+  }
+  .menua:before {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .menu .on {
+    font-size: 18px;
+  }
+  .menu .on:before,
+  .menua:hover:before {
+    width: 40px;
+  }
+  .hduser {
+    height: 55px;
+  }
+  .hduser p {
+    line-height: 30px;
+    font-size: 16px;
+  }
+  .hduserA {
+    line-height: 30px;
+    font-size: 16px;
+  }
+  .hdTanH {
+    width: 17px;
+    height: 17px;
+    margin-left: 8px;
+  }
+  .hdTanN {
+    padding-top: 8px;
+  }
+  .hdTanNr {
+    width: 160px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  }
+  .hdTanNr h3 {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .hdTanNp {
+    padding: 3px 0 5px;
+  }
+  .hdTanNp p {
+    font-size: 13px;
+    line-height: 20px;
+    padding-left: 14px;
+  }
+  .hdTanNp p:before {
+    left: 4px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 960px) {
+  body {
+    font-size: 14px;
+  }
+  /*header*/
+  .header {
+    height: 51px;
+  }
+  .Logo {
+    width: 90px;
+    height: 31px;
+  }
+  .LogoN {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .menua {
+    line-height: 51px;
+    width: 90px;
+  }
+  .menua:before {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .menu .on {
+    font-size: 16px;
+  }
+  .menu .on:before,
+  .menua:hover:before {
+    width: 40px;
+  }
+  .hduser {
+    height: 51px;
+  }
+  .hduser p {
+    line-height: 30px;
+  }
+  .hduserA {
+    line-height: 30px;
+  }
+  .hdTanH {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+  }
+  .hdTanN {
+    padding-top: 8px;
+  }
+  .hdTanNr {
+    width: 140px;
+    padding: 8px 14px;
+    border-radius: 3px;
+    box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  }
+  .hdTanNr h3 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .hdTanNp {
+    padding: 1px 0 3px;
+  }
+  .hdTanNp p {
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 14px;
+  }
+  .hdTanNp p:before {
+    left: 4px;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+  }
+}
+@media screen and (max-width: 960px) {
+  body {
+    font-size: 14px;
+  }
+  /*header*/
+  .header {
+    height: 51px;
+    min-width: 760px;
+  }
+  .Logo {
+    width: 90px;
+    height: 31px;
+  }
+  .LogoN {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .menua {
+    line-height: 51px;
+    width: 90px;
+  }
+  .menua:before {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .menu .on {
+    font-size: 16px;
+  }
+  .menu .on:before,
+  .menua:hover:before {
+    width: 40px;
+  }
+  .hduser {
+    height: 51px;
+  }
+  .hduser p {
+    line-height: 30px;
+  }
+  .hduserA {
+    line-height: 30px;
+  }
+  .hdTanH {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+  }
+  .hdTanN {
+    padding-top: 8px;
+  }
+  .hdTanNr {
+    width: 140px;
+    padding: 8px 14px;
+    border-radius: 3px;
+    box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  }
+  .hdTanNr h3 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .hdTanNp {
+    padding: 1px 0 3px;
+  }
+  .hdTanNp p {
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 14px;
+  }
+  .hdTanNp p:before {
+    left: 4px;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+  }
+}

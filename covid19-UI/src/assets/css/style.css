@@ -1,0 +1,2867 @@
+/*通用*/
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  color: #000;
+  background-color: #f3f3f3;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  font-family: Arial;
+}
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  list-style: none;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  text-shadow: none;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+textarea,
+input,
+button,
+select {
+  outline: none;
+  -webkit-appearance: none;
+  font-family: Arial;
+}
+a {
+  color: #6c6c6c;
+  text-decoration: none;
+}
+img {
+  border: none;
+  display: block;
+}
+span {
+  margin: 0;
+  padding: 0;
+}
+
+/**/
+.Mover {
+  transition: 0.5s;
+  transition: All 0.4s ease-in-out;
+  -webkit-transition: All 0.4s ease-in-out;
+  -moz-transition: All 0.4s ease-in-out;
+  -o-transition: All 0.4s ease-in-out;
+}
+.Mover:hover {
+  transition: 0.5s;
+  ransform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  -ms-transform: translate(0, -10px);
+}
+.enlarge img {
+  width: 100%;
+  transition: 0.5s;
+}
+.enlarge:hover img {
+  -ms-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  transform: scale(1.04);
+  transition: 0.5s;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.flexC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.fl-bet {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.fl-cen {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.fl-end {
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  justify-content: flex-end;
+}
+
+/*****************
+-------首页-------
+*****************/
+/*header*/
+.header {
+  z-index: 110;
+  background: #ca2420;
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: #fff;
+  width: 98%;
+  padding: 0 1%;
+}
+.Logo {
+  display: block;
+  margin-right: 1%;
+}
+.LogoN {
+  font-weight: 550;
+}
+.menu {
+  margin-left: 3%;
+}
+.menua {
+  color: #fff;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.menua:before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  background: #fff;
+  width: 0;
+  transition: 0.5s;
+}
+.menu .on {
+  font-weight: 550;
+}
+.menu .on:before,
+.menua:hover:before {
+  transition: 0.5s;
+}
+.hduser {
+  margin-left: auto;
+  position: relative;
+}
+.hduserA {
+  color: #fff;
+}
+.hduserA:hover {
+  text-decoration: underline;
+}
+.hdTanH {
+  display: block;
+  background-image: url("../images/TanHao.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.hdTanN {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+}
+.hdTanNr {
+  background: #fff;
+}
+.hdTanNr h3 {
+  color: #060606;
+  font-weight: 550;
+}
+.hdTanNp p {
+  position: relative;
+  color: #707070;
+}
+.hdTanNp p:before {
+  display: block;
+  content: "";
+  position: absolute;
+  background: #959595;
+  border-radius: 50%;
+}
+/*主体*/
+.IndDk {
+  position: relative;
+  width: 100%;
+}
+/*title*/
+.title {
+  position: relative;
+}
+.title h3 {
+  color: #111;
+  font-weight: 550;
+}
+.WenH {
+  display: block;
+  background-size: 100%;
+  background-image: url("../images/WenHao.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.titleN,
+.AdmN {
+  color: #545454;
+  box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  position: absolute;
+  background: #fff;
+  display: none;
+  z-index: 99;
+}
+.titleN span,
+.AdmN span {
+  color: #1c1c1c;
+  font-weight: 550;
+}
+/*左边*/
+.searchK {
+  background: #fff;
+}
+.searchI {
+  height: 100%;
+  display: block;
+  background-image: url("../images/search.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.IndSeaI {
+  color: #2a2a2a;
+  background: none;
+  border: none;
+}
+.titAcc {
+  display: block;
+  margin-left: auto;
+  text-decoration: underline;
+}
+.IndDD {
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+}
+.IndAcca {
+  color: #232323;
+  position: relative;
+}
+.IndAcca p {
+  position: relative;
+}
+.IndAcca p:before {
+  display: block;
+  content: "";
+  position: absolute;
+  background: #dcdcdc;
+  border-radius: 50%;
+}
+.IndAcca span {
+  color: #6a6a6a;
+  display: block;
+}
+.IndAccI {
+  background: #d2d2d2;
+  display: block;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  margin-right: auto;
+}
+.IndAcca .CloRed:before {
+  display: none;
+}
+.IndAccBut p {
+  color: #7c7c7c;
+}
+.IndAccJ {
+  display: block;
+  background-image: url("../images/Jiao01.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.IndAccOn .IndAccJ {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transition: 0.5s;
+}
+.IndAccN {
+  transition: 0.5s;
+  height: auto;
+}
+.IndAccNo {
+  overflow: hidden;
+  transition: 0.5s;
+}
+/*中间*/
+.IndCon {
+  position: relative;
+}
+.IndConK {
+  border-bottom: 1px solid #e5e5e5;
+}
+.IndConD {
+  width: 100%;
+}
+.MuiFormGroup-root.flex{
+  width: 100%;
+  flex-direction: row;
+  padding: 10px 0;
+}
+.Indlab {
+  color: #444;
+}
+.Indlab input[type="radio"] {
+  -webkit-appearance: none;
+  vertical-align: middle;
+  display: block;
+  outline: none;
+  background: #fafbfc;
+  border-radius: 50%;
+  border: 1px solid #e6e6e6;
+}
+.Indlab input[type="radio"]:checked {
+  background: #fff;
+}
+.IndConI {
+  background: #f3f3f3;
+  color: #444;
+  border: none;
+  display: block;
+}
+.IndTex {
+  color: #151515;
+  background: #f8f8f8;
+  border: none;
+}
+.IndConZ {
+  color: #141414;
+}
+.IndCheck {
+  color: #444;
+}
+.IndConF {
+  /* display: none; */
+  padding-right: 3%;
+}
+.IndCoTH img {
+  display: block;
+  margin: 0 auto;
+}
+.IndConFtit p {
+  font-weight: 550;
+}
+.IndConFta {
+  display: block;
+  text-decoration: underline;
+}
+.IndConFtp {
+  color: #545454;
+}
+
+.chk_3 {
+  display: none;
+}
+.chk_3 + label {
+  background-color: #9f9f9f;
+  border-radius: 7px;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  width: 40px;
+  height: 14px;
+}
+.chk_3 + label:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  -webkit-transition: box-shadow 0.1s ease-in;
+  transition: box-shadow 0.1s ease-in;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0, 0, 0, 0.4);
+}
+.chk_3 + label:before {
+  content: " ";
+  position: absolute;
+  background: #fafafa;
+  top: -3px;
+  left: 0;
+  z-index: 99;
+  width: 20px;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05), 0 0px 1px rgba(0, 0, 0, 0.3);
+}
+.chk_3:active + label:before {
+  width: 30px;
+}
+.chk_3:checked:active + label:before {
+  width: 20px;
+  left: 20px;
+}
+.chk_3:checked + label:before {
+  content: " ";
+  position: absolute;
+  left: 20px;
+  border-radius: 10px;
+  background: #ca2420;
+}
+.chk_3:checked + label:after {
+  content: " ";
+  position: absolute;
+  background: #e9a3a1;
+}
+
+.IndDate {
+  width: 100%;
+  display: none;
+}
+.IndDateT h3 {
+  color: #141414;
+  font-weight: 550;
+}
+.IndDateT p {
+  color: #747474;
+}
+.IndDateN {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.Datelab {
+  background: #fff;
+  position: relative;
+  display: inline-block;
+  
+}
+.Datelab div{
+  padding: 50% 0;
+  position: relative;
+  height: 0;
+}
+.Datelab p {
+  height: 100%;
+  border: 1px solid #efefef;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+}
+.Datelab input[type="checkbox"] {
+  outline: none;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 2px;
+  border: 1px solid #e5e5e5;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.Datelab input[type="checkbox"]:checked {
+  background-color: #3f3f3f;
+  border: 1px solid #3f3f3f;
+  background-image: url("../images/check.png");
+}
+.Datelab:nth-child(7n + 1),
+.Datelab:nth-child(7n + 7) {
+  background: #f6f6f6;
+}
+.Datelab input:checked + p {
+  border: 1px solid #de7775;
+}
+
+.IndBut {
+  color: #fff;
+  background: #a2a2a2;
+  display: block;
+  border: none;
+}
+.IndButo {
+  background: #ca2420;
+}
+.Indsdu {
+  width: 100%;
+}
+/*右边*/
+.Indsel {
+  width: 100%;
+  background-color: #fff;
+  color: #2a2a2a;
+  border: none;
+  display: block;
+  background-image: url("../images/Indsel.png");
+  background-repeat: no-repeat;
+}
+/*
+display: -webkit-box;display: -ms-flexbox;display:flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content:space-between;align-items:center; flex-wrap:wrap;align-content:center
+|flex-start|flex-end|center|space-between|space-around
+
+overflow: hidden;text-overflow:ellipsis;white-space: nowrap;
+display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;
+
+transition:0.5s;
+
+.title h3:before{display:block;content:'';position:absolute;left:0;right:0;margin:0 auto;bottom:0;}
+*/
+@media screen and (min-width: 1680px) {
+  body {
+    font-size: 16px;
+  }
+  /*header*/
+  .header {
+    height: 69px;
+  }
+  .Logo {
+    width: 130px;
+    height: 41px;
+  }
+  .LogoN {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .menua {
+    line-height: 69px;
+    width: 115px;
+    font-size: 18px;
+  }
+  .menua:before {
+    height: 5px;
+    border-radius: 3px;
+  }
+  .menu .on {
+    font-size: 20px;
+  }
+  .menu .on:before,
+  .menua:hover:before {
+    width: 50px;
+  }
+  .hduser {
+    height: 69px;
+    font-size: 18px;
+  }
+  .hduser p {
+    line-height: 30px;
+  }
+  .hduserA {
+    line-height: 30px;
+  }
+  .hdTanH {
+    width: 19px;
+    height: 19px;
+    margin-left: 10px;
+  }
+  .hdTanN {
+    padding-top: 10px;
+  }
+  .hdTanNr {
+    width: 186px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  }
+  .hdTanNr h3 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .hdTanNp {
+    padding: 3px 0 5px;
+  }
+  .hdTanNp p {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 16px;
+  }
+  .hdTanNp p:before {
+    left: 4px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+  }
+  /*主体*/
+  .IndDk {
+    padding: 95px 0 69px;
+  }
+  /*title*/
+  .title {
+    height: 20px;
+    padding-bottom: 13px;
+  }
+  .title h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .WenH {
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+  }
+  .titleN,
+  .AdmN {
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 6px;
+    top: -6px;
+  }
+  .titleN1 {
+    width: 52%;
+    padding: 12px 5.5%;
+  }
+  .titleN2 {
+    width: 60%;
+    padding: 10px 5%;
+  }
+  .titleN3 {
+    width: 58%;
+    padding: 15px 2.5%;
+  }
+  /*左边*/
+  .IndLeft {
+    width: 20.8%;
+    margin-left: 1%;
+  }
+  .searchK {
+    height: 42px;
+    border-radius: 6px;
+    margin-bottom: 35px;
+  }
+  .searchI {
+    width: 12%;
+    background-size: 17px;
+  }
+  .IndSeaI {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    width: 86%;
+  }
+  .titAcc {
+    line-height: 20px;
+  }
+  .IndDD {
+    border-radius: 6px;
+  }
+  .IndAcc {
+    width: 90%;
+    padding: 14px 5%;
+  }
+  .IndAcca {
+    height: 40px;
+  }
+  .IndAcca p {
+    line-height: 20px;
+  }
+  .IndAcca p:before {
+    right: -9px;
+    top: -1px;
+    width: 5px;
+    height: 5px;
+  }
+  .IndAcca span {
+    line-height: 20px;
+  }
+  .IndAccI {
+    width: 38px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 6px;
+  }
+  .IndAccBut {
+    width: 140px;
+    margin: 2px auto 0;
+    height: 25px;
+  }
+  .IndAccBut p {
+    margin-right: 5px;
+    line-height: 20px;
+  }
+  .IndAccJ {
+    width: 13px;
+    height: 13px;
+  }
+  .IndAccNo {
+    height: 280px;
+  }
+  /*中间*/
+  .IndCon {
+    width: 52%;
+    padding: 20px 1.2% 14px;
+    margin-left: 1%;
+  }
+  .IndConK {
+    margin: 13px auto 35px;
+    padding-bottom: 12px;
+  }
+  .Indlab {
+    margin-bottom: 18px;
+  }
+  .Indlab p {
+    line-height: 20px;
+    margin-left: 12px;
+  }
+  .Indlab input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-left: 4px;
+  }
+  .Indlab input[type="radio"]:checked {
+    border: 5px solid #ca2420;
+  }
+  .IndConF {
+  }
+  .IndConF {
+    width: 68%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+  .IndCoTH {
+    width: 7%;
+    margin-top: 5px;
+  }
+  .IndCoTH img {
+    width: 17px;
+  }
+  .IndConFs {
+    width: 93%;
+  }
+  .IndConFt {
+    font-size: 14px;
+  }
+  .IndConFtit {
+    height: 27px;
+  }
+  .IndConFtit p {
+    line-height: 20px;
+    margin-right: 10px;
+  }
+  .IndConFta {
+    line-height: 20px;
+  }
+  .IndConFtp {
+    line-height: 22px;
+    height: 44px;
+    height: auto;
+    max-height: 100%;
+  }
+  .IndConFtpO {
+    max-height: 44px;
+    overflow: hidden;
+  }
+  .IndConFG {
+    padding: 15px 0 10px;
+  }
+  .Indlab15 {
+    width: 15%;
+  }
+  .Indlab25 {
+    width: 25%;
+  }
+  .Indlab33 {
+    width: 33.33%;
+  }
+  .Indlab60 {
+    width: 60%;
+  }
+
+  .IndConI {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 0 13px;
+    width: 250px;
+    height: 38px;
+    line-height: 38px;
+  }
+  .IndCoZS {
+    line-height: 25px;
+  }
+  .IndTex {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 13px 2.5%;
+    width: 95%;
+    border-radius: 5px;
+    height: 110px;
+    margin-bottom: 25px;
+  }
+  .IndConZ {
+    line-height: 30px;
+    padding-bottom: 15px;
+  }
+
+  .IndConV {
+    margin: 13px auto 35px;
+    padding-bottom: 12px;
+  }
+  .IndConDw,
+  .IndConDw1 .Indlab {
+    width: 20%;
+  }
+  .IndConDw .Indlab p,
+  .IndConDw1 p {
+  }
+  .IndConFw {
+    padding: 15px 0;
+    margin: 0;
+    width: 80%;
+  }
+  .IndDateInp {
+    width: 150px;
+    padding: 0 20px;
+    margin-bottom: 18px;
+  }
+  .IndCheck {
+    line-height: 20px;
+    margin-left: 15px;
+  }
+
+  .IndDateT {
+    margin: 20px auto 15px;
+  }
+  .IndDateT h3 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 3px;
+  }
+  .IndDateT p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .Datelab {
+    width: 12.8%;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+  }
+  .Datelab p {
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 0 6%;
+    line-height: 36px;
+    width: 88%;
+    height: 100%;
+  }
+  .Datelab input[type="checkbox"] {
+    border-radius: 2px;
+    border: 1px solid #e5e5e5;
+    width: 16px;
+    height: 16px;
+    margin-top: 10px;
+    margin-right: 6%;
+  }
+
+  .IndBut {
+    width: 122px;
+    height: 38px;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 0 0 18px;
+    margin-left: auto;
+    margin-right: 7%;
+  }
+  .Indsdu {
+    line-height: 20px;
+    width: 100%;
+  }
+  .IndDatB {
+    margin-top: 30px;
+  }
+
+  /*右边*/
+  .IndRight {
+    width: 20.8%;
+    margin-left: 1%;
+  }
+  .Indsel {
+    border-radius: 6px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 5%;
+    font-size: 16px;
+    background-position: 95% center;
+    background-size: 12px;
+  }
+}
+@media screen and (max-width: 1679px) and (min-width: 1400px) {
+  body {
+    font-size: 14px;
+  }
+  /*header*/
+  .header {
+    height: 61px;
+  }
+  .Logo {
+    width: 115px;
+    height: 37px;
+  }
+  .LogoN {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .menua {
+    line-height: 61px;
+    width: 110px;
+    font-size: 17px;
+  }
+  .menua:before {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .menu .on {
+    font-size: 19px;
+  }
+  .menu .on:before,
+  .menua:hover:before {
+    width: 44px;
+  }
+  .hduser {
+    height: 61px;
+  }
+  .hduser p {
+    line-height: 30px;
+    font-size: 17px;
+  }
+  .hduserA {
+    line-height: 30px;
+    font-size: 17px;
+  }
+  .hdTanH {
+    width: 17px;
+    height: 17px;
+    margin-left: 8px;
+  }
+  .hdTanN {
+    padding-top: 10px;
+  }
+  .hdTanNr {
+    width: 186px;
+    padding: 11px 18px;
+    border-radius: 6px;
+    box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  }
+  .hdTanNr h3 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .hdTanNp {
+    padding: 3px 0 5px;
+  }
+  .hdTanNp p {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 16px;
+  }
+  .hdTanNp p:before {
+    left: 4px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+  }
+  /*主体*/
+  .IndDk {
+    padding: 80px 0 61px;
+  }
+  /*title*/
+  .title {
+    height: 20px;
+    padding-bottom: 11px;
+  }
+  .title h3 {
+    font-size: 17px;
+    line-height: 20px;
+  }
+  .WenH {
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+  }
+  .titleN,
+  .AdmN {
+    font-size: 13px;
+    line-height: 22px;
+    border-radius: 5px;
+    top: -6px;
+  }
+  .titleN1 {
+    width: 60%;
+    padding: 12px 5.5%;
+  }
+  .titleN2 {
+    width: 60%;
+    padding: 10px 5%;
+  }
+  .titleN3 {
+    width: 58%;
+    padding: 15px 2.5%;
+  }
+  /*左边*/
+  .IndLeft {
+    width: 20.8%;
+    margin-left: 1%;
+  }
+  .searchK {
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 32px;
+  }
+  .searchI {
+    width: 12%;
+    background-size: 17px;
+  }
+  .IndSeaI {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    width: 86%;
+  }
+  .titAcc {
+    line-height: 20px;
+  }
+  .IndDD {
+    border-radius: 5px;
+  }
+  .IndAcc {
+    width: 90%;
+    padding: 12px 5%;
+  }
+  .IndAcca {
+    height: 38px;
+  }
+  .IndAcca p {
+    line-height: 20px;
+  }
+  .IndAcca p:before {
+    right: -8px;
+    top: -1px;
+    width: 4px;
+    height: 4px;
+  }
+  .IndAcca span {
+    line-height: 20px;
+  }
+  .IndAccI {
+    width: 32px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .IndAccBut {
+    width: 120px;
+    margin: 2px auto 0;
+    height: 25px;
+  }
+  .IndAccBut p {
+    margin-right: 5px;
+    line-height: 20px;
+  }
+  .IndAccJ {
+    width: 12px;
+    height: 12px;
+  }
+  .IndAccNo {
+    height: 266px;
+  }
+  /*中间*/
+  .IndCon {
+    width: 52%;
+    padding: 17px 1.2% 14px;
+    margin-left: 1%;
+  }
+  .IndConK {
+    margin: 10px auto 30px;
+    padding-bottom: 10px;
+  }
+  .Indlab {
+    margin-bottom: 15px;
+  }
+  .Indlab p {
+    line-height: 20px;
+    margin-left: 10px;
+  }
+  .Indlab input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    margin-top: 2px;
+  }
+  .Indlab input[type="radio"]:checked {
+    border: 4px solid #ca2420;
+  }
+  .IndConF {
+    width: 76%;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+  }
+  .IndCoTH {
+    width: 7%;
+    margin-top: 5px;
+  }
+  .IndCoTH img {
+    width: 16px;
+  }
+  .IndConFs {
+    width: 93%;
+  }
+  .IndConFt {
+    font-size: 13px;
+  }
+  .IndConFtit {
+    height: 26px;
+  }
+  .IndConFtit p {
+    line-height: 20px;
+    margin-right: 8px;
+  }
+  .IndConFta {
+    line-height: 20px;
+  }
+  .IndConFtp {
+    line-height: 20px;
+    height: auto;
+    max-height: 100%;
+  }
+  .IndConFtpO {
+    max-height: 40px;
+    overflow: hidden;
+  }
+  .IndConFG {
+    padding: 12px 0 8px;
+  }
+  .Indlab15 {
+    width: 15%;
+  }
+  .Indlab25 {
+    width: 25%;
+  }
+  .Indlab33 {
+    width: 33.33%;
+  }
+  .Indlab60 {
+    width: 60%;
+  }
+
+  .IndConI {
+    border-radius: 4px;
+    margin-bottom: 9px;
+    font-size: 14px;
+    padding: 0 12px;
+    width: 220px;
+    height: 36px;
+    line-height: 36px;
+  }
+  .IndCoZS {
+    line-height: 25px;
+  }
+  .IndTex {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 13px 2.5%;
+    width: 95%;
+    border-radius: 5px;
+    height: 98px;
+    margin-bottom: 20px;
+  }
+  .IndConZ {
+    line-height: 28px;
+    padding-bottom: 12px;
+  }
+
+  .IndConV {
+    margin: 10px auto 30px;
+    padding-bottom: 10px;
+  }
+  .IndConDw,
+  .IndConDw1 .Indlab {
+    width: 20%;
+  }
+  .IndConDw .Indlab p,
+  .IndConDw1 p {
+  }
+  .IndConFw {
+    padding: 10px 0;
+    margin: 0;
+    width: 80%;
+  }
+  .IndDateInp {
+    width: 130px;
+    padding: 0 16px;
+    margin-bottom: 15px;
+  }
+  .IndCheck {
+    line-height: 20px;
+    margin-left: 12px;
+  }
+
+  .IndDateT {
+    margin: 15px auto 12px;
+  }
+  .IndDateT h3 {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 3px;
+  }
+  .IndDateT p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .Datelab {
+    width: 12.8%;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+  }
+  .Datelab p {
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 0 6%;
+    line-height: 32px;
+    width: 88%;
+    height: 100%;
+  }
+  .Datelab input[type="checkbox"] {
+    border-radius: 2px;
+    border: 1px solid #e5e5e5;
+    width: 16px;
+    height: 16px;
+    margin-top: 7px;
+    margin-right: 6%;
+  }
+
+  .IndBut {
+    width: 112px;
+    height: 36px;
+    border-radius: 2px;
+    font-size: 15px;
+    margin: 0 0 15px;
+    margin-left: auto;
+    margin-right: 6%;
+  }
+  .Indsdu {
+    line-height: 20px;
+    width: 100%;
+  }
+  .IndButz {
+    margin: 0 0 15px;
+    margin-left: auto;
+    margin-right: 5%;
+  }
+  .IndDatB {
+    margin-top: 25px;
+  }
+  /*右边*/
+  .IndRight {
+    width: 20.8%;
+    margin-left: 1%;
+  }
+  .Indsel {
+    border-radius: 6px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 5%;
+    font-size: 14px;
+    background-position: 95% center;
+    background-size: 12px;
+  }
+}
+@media screen and (max-width: 1399px) and (min-width: 1280px) {
+  body {
+    font-size: 12px;
+  }
+  /*header*/
+  .header {
+    height: 55px;
+  }
+  .Logo {
+    width: 100px;
+    height: 33px;
+  }
+  .LogoN {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .menua {
+    line-height: 55px;
+    width: 105px;
+    font-size: 16px;
+  }
+  .menua:before {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .menu .on {
+    font-size: 18px;
+  }
+  .menu .on:before,
+  .menua:hover:before {
+    width: 40px;
+  }
+  .hduser {
+    height: 55px;
+  }
+  .hduser p {
+    line-height: 30px;
+    font-size: 16px;
+  }
+  .hduserA {
+    line-height: 30px;
+    font-size: 16px;
+  }
+  .hdTanH {
+    width: 17px;
+    height: 17px;
+    margin-left: 8px;
+  }
+  .hdTanN {
+    padding-top: 8px;
+  }
+  .hdTanNr {
+    width: 160px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  }
+  .hdTanNr h3 {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .hdTanNp {
+    padding: 3px 0 5px;
+  }
+  .hdTanNp p {
+    font-size: 13px;
+    line-height: 20px;
+    padding-left: 14px;
+  }
+  .hdTanNp p:before {
+    left: 4px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+  }
+  /*主体*/
+  .IndDk {
+    padding: 74px 0 55px;
+  }
+  /*title*/
+  .title {
+    height: 20px;
+    padding-bottom: 9px;
+  }
+  .title h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .WenH {
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+  }
+  .titleN,
+  .AdmN {
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 4px;
+    top: -6px;
+  }
+  .titleN1 {
+    width: 66%;
+    padding: 8px 5%;
+  }
+  .titleN2 {
+    width: 66%;
+    padding: 8px 5%;
+  }
+  .titleN3 {
+    width: 58%;
+    padding: 12px 2.5%;
+  }
+  /*左边*/
+  .IndLeft {
+    width: 20.8%;
+    margin-left: 1%;
+  }
+  .searchK {
+    height: 36px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+  }
+  .searchI {
+    width: 12%;
+    background-size: 14px;
+  }
+  .IndSeaI {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    width: 86%;
+  }
+  .titAcc {
+    line-height: 20px;
+  }
+  .IndDD {
+    border-radius: 5px;
+  }
+  .IndAcc {
+    width: 90%;
+    padding: 12px 5%;
+  }
+  .IndAcca {
+    height: 32px;
+  }
+  .IndAcca p {
+    line-height: 20px;
+  }
+  .IndAcca p:before {
+    right: -8px;
+    top: -1px;
+    width: 4px;
+    height: 4px;
+  }
+  .IndAcca span {
+    line-height: 20px;
+  }
+  .IndAccI {
+    width: 32px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .IndAccBut {
+    width: 120px;
+    margin: 2px auto 0;
+    height: 25px;
+  }
+  .IndAccBut p {
+    margin-right: 5px;
+    line-height: 20px;
+  }
+  .IndAccJ {
+    width: 10px;
+    height: 10px;
+  }
+  .IndAccNo {
+    height: 224px;
+  }
+  /*中间*/
+  .IndCon {
+    width: 52%;
+    padding: 14px 1.2% 10px;
+    margin-left: 1%;
+  }
+  .IndConK {
+    margin: 8px auto 24px;
+    padding-bottom: 8px;
+  }
+  .Indlab {
+    margin-bottom: 10px;
+  }
+  .Indlab p {
+    line-height: 20px;
+    margin-left: 8px;
+  }
+  .Indlab input[type="radio"] {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    margin-top: 2px;
+  }
+  .Indlab input[type="radio"]:checked {
+    border: 4px solid #ca2420;
+  }
+
+  .IndConF {
+    width: 76%;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+  }
+  .IndCoTH {
+    width: 7%;
+    margin-top: 5px;
+  }
+  .IndCoTH img {
+    width: 14px;
+  }
+  .IndConFs {
+    width: 93%;
+  }
+  .IndConFt {
+    font-size: 12px;
+  }
+  .IndConFtit {
+    height: 24px;
+  }
+  .IndConFtit p {
+    line-height: 20px;
+    margin-right: 8px;
+  }
+  .IndConFta {
+    line-height: 20px;
+  }
+  .IndConFtp {
+    line-height: 18px;
+    height: auto;
+    max-height: 100%;
+  }
+  .IndConFtpO {
+    max-height: 36px;
+    overflow: hidden;
+  }
+  .IndConFG {
+    padding: 10px 0 6px;
+  }
+  .Indlab15 {
+    width: 15%;
+  }
+  .Indlab25 {
+    width: 25%;
+  }
+  .Indlab33 {
+    width: 33.33%;
+  }
+  .Indlab60 {
+    width: 60%;
+  }
+
+  .IndConI {
+    border-radius: 3px;
+    margin-bottom: 7px;
+    font-size: 12px;
+    padding: 0 10px;
+    width: 180px;
+    height: 32px;
+    line-height: 32px;
+  }
+  .IndCoZS {
+    line-height: 25px;
+  }
+  .IndTex {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px 2.5%;
+    width: 95%;
+    border-radius: 3px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+  .IndConZ {
+    line-height: 20px;
+    padding-bottom: 10px;
+  }
+
+  .IndConV {
+    margin: 8px auto 25px;
+    padding-bottom: 8px;
+  }
+  .IndConDw,
+  .IndConDw1 .Indlab {
+    width: 20%;
+  }
+  .IndConDw .Indlab p,
+  .IndConDw1 p {
+  }
+  .IndConFw {
+    padding: 7px 0;
+    margin: 0;
+    width: 80%;
+  }
+  .IndDateInp {
+    width: 110px;
+    padding: 0 12px;
+    margin-bottom: 10px;
+  }
+  .IndConDw1 .Indlab {
+    margin-bottom: 0;
+  }
+  .IndCheck {
+    line-height: 20px;
+    margin-left: 10px;
+  }
+
+  .IndDateT {
+    margin: 10px auto 12px;
+  }
+  .IndDateT h3 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 1px;
+  }
+  .IndDateT p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .Datelab {
+    width: 12.8%;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+  }
+  .Datelab p {
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 0 6%;
+    line-height: 28px;
+    width: 88%;
+    height: 100%;
+  }
+  .Datelab input[type="checkbox"] {
+    border-radius: 2px;
+    border: 1px solid #e5e5e5;
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    margin-right: 6%;
+  }
+
+  .IndBut {
+    width: 102px;
+    height: 32px;
+    border-radius: 2px;
+    font-size: 14px;
+    margin: 0 0 10px;
+    margin-left: auto;
+    margin-right: 5.5%;
+  }
+  .Indsdu {
+    line-height: 20px;
+    width: 100%;
+  }
+  .IndButz {
+    margin: 0 0 10px;
+    margin-left: auto;
+    margin-right: 5%;
+  }
+  .IndDatB {
+    margin-top: 17px;
+  }
+
+  /*右边*/
+  .IndRight {
+    width: 20.8%;
+    margin-left: 1%;
+  }
+  .Indsel {
+    border-radius: 4px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 5%;
+    font-size: 12px;
+    background-position: 95% center;
+    background-size: 10px;
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 960px) {
+  body {
+    font-size: 14px;
+  }
+  /*header*/
+  .header {
+    height: 51px;
+  }
+  .Logo {
+    width: 90px;
+    height: 31px;
+  }
+  .LogoN {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .menua {
+    line-height: 51px;
+    width: 90px;
+  }
+  .menua:before {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .menu .on {
+    font-size: 16px;
+  }
+  .menu .on:before,
+  .menua:hover:before {
+    width: 40px;
+  }
+  .hduser {
+    height: 51px;
+  }
+  .hduser p {
+    line-height: 30px;
+  }
+  .hduserA {
+    line-height: 30px;
+  }
+  .hdTanH {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+  }
+  .hdTanN {
+    padding-top: 8px;
+  }
+  .hdTanNr {
+    width: 140px;
+    padding: 8px 14px;
+    border-radius: 3px;
+    box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  }
+  .hdTanNr h3 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .hdTanNp {
+    padding: 1px 0 3px;
+  }
+  .hdTanNp p {
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 14px;
+  }
+  .hdTanNp p:before {
+    left: 4px;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+  }
+  /*主体*/
+  .IndDk {
+    padding: 65px 0 51px;
+  }
+  /*title*/
+  .title {
+    height: 20px;
+    padding-bottom: 9px;
+  }
+  .title h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .WenH {
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+  }
+  .titleN,
+  .AdmN {
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 4px;
+    top: -6px;
+  }
+  .titleN1 {
+    width: 66%;
+    padding: 8px 5%;
+  }
+  .titleN2 {
+    width: 66%;
+    padding: 8px 5%;
+  }
+  .titleN3 {
+    width: 58%;
+    padding: 12px 2.5%;
+  }
+  /*左边*/
+  .IndLeft {
+    width: 30%;
+    margin-left: 1%;
+    margin-bottom: 15px;
+  }
+  .searchK {
+    height: 36px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+  }
+  .searchI {
+    width: 12%;
+    background-size: 14px;
+  }
+  .IndSeaI {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    width: 86%;
+  }
+  .titAcc {
+    line-height: 20px;
+  }
+  .IndDD {
+    border-radius: 5px;
+  }
+  .IndAcc {
+    width: 90%;
+    padding: 12px 5%;
+  }
+  .IndAcca {
+    height: 32px;
+  }
+  .IndAcca p {
+    line-height: 20px;
+  }
+  .IndAcca p:before {
+    right: -8px;
+    top: -1px;
+    width: 4px;
+    height: 4px;
+  }
+  .IndAcca span {
+    line-height: 20px;
+  }
+  .IndAccI {
+    width: 32px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .IndAccBut {
+    width: 120px;
+    margin: 2px auto 0;
+    height: 25px;
+  }
+  .IndAccBut p {
+    margin-right: 5px;
+    line-height: 20px;
+  }
+  .IndAccJ {
+    width: 10px;
+    height: 10px;
+  }
+  .IndAccNo {
+    height: 224px;
+  }
+  /*中间*/
+  .IndCon {
+    width: 64.6%;
+    padding: 14px 1.2% 10px;
+    margin-left: 1%;
+  }
+  .IndConK {
+    margin: 8px auto 24px;
+    padding-bottom: 8px;
+  }
+  .Indlab {
+    margin-bottom: 10px;
+  }
+  .Indlab p {
+    line-height: 20px;
+    margin-left: 8px;
+  }
+  .Indlab input[type="radio"] {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    margin-top: 2px;
+  }
+  .Indlab input[type="radio"]:checked {
+    border: 4px solid #ca2420;
+  }
+
+  .IndConF {
+    width: 76%;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+  }
+  .IndCoTH {
+    width: 7%;
+    margin-top: 5px;
+  }
+  .IndCoTH img {
+    width: 14px;
+  }
+  .IndConFs {
+    width: 93%;
+  }
+  .IndConFt {
+    font-size: 12px;
+  }
+  .IndConFtit {
+    height: 24px;
+  }
+  .IndConFtit p {
+    line-height: 20px;
+    margin-right: 8px;
+  }
+  .IndConFta {
+    line-height: 20px;
+  }
+  .IndConFtp {
+    line-height: 18px;
+    height: auto;
+    max-height: 100%;
+  }
+  .IndConFtpO {
+    max-height: 36px;
+    overflow: hidden;
+  }
+  .IndConFG {
+    padding: 10px 0 6px;
+  }
+  .Indlab15 {
+    width: 15%;
+  }
+  .Indlab25 {
+    width: 25%;
+  }
+  .Indlab33 {
+    width: 33.33%;
+  }
+  .Indlab60 {
+    width: 60%;
+  }
+
+  .IndConI {
+    border-radius: 3px;
+    margin-bottom: 7px;
+    font-size: 12px;
+    padding: 0 10px;
+    width: 180px;
+    height: 32px;
+    line-height: 32px;
+  }
+  .IndCoZS {
+    line-height: 25px;
+  }
+  .IndTex {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px 2.5%;
+    width: 95%;
+    border-radius: 3px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+  .IndConZ {
+    line-height: 20px;
+    padding-bottom: 10px;
+  }
+
+  .IndConV {
+    margin: 8px auto 25px;
+    padding-bottom: 8px;
+  }
+  .IndConDw,
+  .IndConDw1 .Indlab {
+    width: 20%;
+  }
+  .IndConDw .Indlab p,
+  .IndConDw1 p {
+  }
+  .IndConFw {
+    padding: 7px 0;
+    margin: 0;
+    width: 80%;
+  }
+  .IndDateInp {
+    width: 110px;
+    padding: 0 12px;
+    margin-bottom: 10px;
+  }
+  .IndCheck {
+    line-height: 20px;
+    margin-left: 10px;
+  }
+
+  .IndDateT {
+    margin: 10px auto 12px;
+  }
+  .IndDateT h3 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 1px;
+  }
+  .IndDateT p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .Datelab {
+    width: 12.8%;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+  }
+  .Datelab p {
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 0 6%;
+    line-height: 28px;
+    width: 88%;
+    height: 100%;
+  }
+  .Datelab input[type="checkbox"] {
+    border-radius: 2px;
+    border: 1px solid #e5e5e5;
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    margin-right: 6%;
+  }
+
+  .IndBut {
+    width: 102px;
+    height: 32px;
+    border-radius: 2px;
+    font-size: 14px;
+    margin: 0 0 12px;
+    margin-left: auto;
+    margin-right: 5.5%;
+  }
+  .Indsdu {
+    line-height: 20px;
+    width: 100%;
+  }
+  .IndDatB {
+    margin-top: 12px;
+  }
+
+  /*右边*/
+  .IndRight {
+    width: 30%;
+    margin-left: 1%;
+  }
+  .Indsel {
+    border-radius: 4px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 5%;
+    font-size: 12px;
+    background-position: 95% center;
+    background-size: 10px;
+  }
+}
+@media screen and (max-width: 960px) {
+  body {
+    font-size: 14px;
+  }
+  /*header*/
+  .header {
+    height: 51px;
+    min-width: 760px;
+  }
+  .Logo {
+    width: 90px;
+    height: 31px;
+  }
+  .LogoN {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .menua {
+    line-height: 51px;
+    width: 90px;
+  }
+  .menua:before {
+    height: 4px;
+    border-radius: 2px;
+  }
+  .menu .on {
+    font-size: 16px;
+  }
+  .menu .on:before,
+  .menua:hover:before {
+    width: 40px;
+  }
+  .hduser {
+    height: 51px;
+  }
+  .hduser p {
+    line-height: 30px;
+  }
+  .hduserA {
+    line-height: 30px;
+  }
+  .hdTanH {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+  }
+  .hdTanN {
+    padding-top: 8px;
+  }
+  .hdTanNr {
+    width: 140px;
+    padding: 8px 14px;
+    border-radius: 3px;
+    box-shadow: 0 5px 18px rgba(4, 0, 0, 0.08);
+  }
+  .hdTanNr h3 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .hdTanNp {
+    padding: 1px 0 3px;
+  }
+  .hdTanNp p {
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 14px;
+  }
+  .hdTanNp p:before {
+    left: 4px;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+  }
+  /*主体*/
+  .IndDk {
+    padding: 65px 0 51px;
+  }
+  /*title*/
+  .title {
+    height: 20px;
+    padding-bottom: 9px;
+  }
+  .title h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .WenH {
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+  }
+  .titleN,
+  .AdmN {
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 4px;
+    top: -6px;
+  }
+  .titleN1 {
+    width: 66%;
+    padding: 8px 5%;
+  }
+  .titleN2 {
+    width: 66%;
+    padding: 8px 5%;
+  }
+  .titleN3 {
+    width: 58%;
+    padding: 12px 2.5%;
+  }
+  /*左边*/
+  .IndLeft {
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 15px;
+  }
+  .searchK {
+    height: 36px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+  }
+  .searchI {
+    width: 12%;
+    background-size: 14px;
+  }
+  .IndSeaI {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    width: 86%;
+  }
+  .titAcc {
+    line-height: 20px;
+  }
+  .IndDD {
+    border-radius: 5px;
+  }
+  .IndAcc {
+    width: 90%;
+    padding: 12px 5%;
+  }
+  .IndAcca {
+    height: 32px;
+  }
+  .IndAcca p {
+    line-height: 20px;
+  }
+  .IndAcca p:before {
+    right: -8px;
+    top: -1px;
+    width: 4px;
+    height: 4px;
+  }
+  .IndAcca span {
+    line-height: 20px;
+  }
+  .IndAccI {
+    width: 32px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .IndAccBut {
+    width: 120px;
+    margin: 2px auto 0;
+    height: 25px;
+  }
+  .IndAccBut p {
+    margin-right: 5px;
+    line-height: 20px;
+  }
+  .IndAccJ {
+    width: 10px;
+    height: 10px;
+  }
+  .IndAccNo {
+    height: 224px;
+  }
+  /*中间*/
+  .IndCon {
+    width: 95.6%;
+    padding: 14px 1.2% 10px;
+    margin-left: 1%;
+  }
+  .IndConK {
+    margin: 8px auto 24px;
+    padding-bottom: 8px;
+  }
+  .Indlab {
+    margin-bottom: 10px;
+  }
+  .Indlab p {
+    line-height: 20px;
+    margin-left: 8px;
+  }
+  .Indlab input[type="radio"] {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    margin-top: 2px;
+  }
+  .Indlab input[type="radio"]:checked {
+    border: 4px solid #ca2420;
+  }
+  .IndConF {
+    width: 76%;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+  }
+  .IndCoTH {
+    width: 7%;
+    margin-top: 5px;
+  }
+  .IndCoTH img {
+    width: 14px;
+  }
+  .IndConFs {
+    width: 93%;
+  }
+  .IndConFt {
+    font-size: 12px;
+  }
+  .IndConFtit {
+    height: 24px;
+  }
+  .IndConFtit p {
+    line-height: 20px;
+    margin-right: 8px;
+  }
+  .IndConFta {
+    line-height: 20px;
+  }
+  .IndConFtp {
+    line-height: 18px;
+    height: auto;
+    max-height: 100%;
+  }
+  .IndConFtpO {
+    max-height: 36px;
+    overflow: hidden;
+  }
+  .IndConFG {
+    padding: 10px 0 6px;
+  }
+  .Indlab15 {
+    width: 15%;
+  }
+  .Indlab25 {
+    width: 25%;
+  }
+  .Indlab33 {
+    width: 33.33%;
+  }
+  .Indlab60 {
+    width: 60%;
+  }
+
+  .IndConI {
+    border-radius: 3px;
+    margin-bottom: 7px;
+    font-size: 12px;
+    padding: 0 10px;
+    width: 180px;
+    height: 32px;
+    line-height: 32px;
+  }
+  .IndCoZS {
+    line-height: 25px;
+  }
+  .IndTex {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px 2.5%;
+    width: 95%;
+    border-radius: 3px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+  .IndConZ {
+    line-height: 20px;
+    padding-bottom: 10px;
+  }
+
+  .IndConV {
+    margin: 8px auto 25px;
+    padding-bottom: 8px;
+  }
+  .IndConDw,
+  .IndConDw1 .Indlab {
+    width: 20%;
+  }
+  .IndConDw .Indlab p,
+  .IndConDw1 p {
+  }
+  .IndConFw {
+    padding: 7px 0;
+    margin: 0;
+    width: 80%;
+  }
+  .IndDateInp {
+    width: 110px;
+    padding: 0 12px;
+    margin-bottom: 10px;
+  }
+  .IndConDw1 .Indlab {
+    margin-bottom: 0;
+  }
+  .IndCheck {
+    line-height: 20px;
+    margin-left: 10px;
+  }
+
+  .IndDateT {
+    margin: 10px auto 12px;
+  }
+  .IndDateT h3 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  .IndDateT p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .Datelab {
+    width: 12.8%;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+  }
+  .Datelab p {
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 0 6%;
+    line-height: 28px;
+    width: 88%;
+    height: 100%;
+  }
+  .Datelab input[type="checkbox"] {
+    border-radius: 2px;
+    border: 1px solid #e5e5e5;
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    margin-right: 6%;
+  }
+
+  .IndBut {
+    width: 102px;
+    height: 32px;
+    border-radius: 2px;
+    font-size: 14px;
+    margin: 0 0 10px;
+    margin-left: auto;
+    margin-right: 6%;
+  }
+  .Indsdu {
+    line-height: 20px;
+    width: 100%;
+  }
+  .IndDatB {
+    margin-top: 10px;
+  }
+
+  /*右边*/
+  .IndRight {
+    width: 98%;
+    margin-left: 1%;
+  }
+  .Indsel {
+    border-radius: 4px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 5%;
+    font-size: 12px;
+    background-position: 95% center;
+    background-size: 10px;
+  }
+}
+
+/*弹出*/
+.TcB {
+  background: rgba(0, 0, 0, 0.72);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+}
+.TcN {
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: none;
+  overflow: hidden;
+}
+.TcKJ {
+  background: #fff;
+}
+.TcTit {
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 auto;
+}
+.TcTit h3 {
+  color: #111;
+  font-weight: 550;
+}
+.TcTab {
+  border: 1px solid #e5e5e5;
+  color: #232323;
+}
+.TcTab tr th {
+  border-left: 1px solid #e5e5e5;
+  background: #f8f8f8;
+}
+.TcTab tr td {
+  border-left: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+}
+.TcTab tr th:first-child,
+.TcTab tr td:first-child {
+  border-left: none;
+}
+.TcNButa {
+  text-align: center;
+  color: #fff;
+  background: #434343;
+}
+/**/
+.prompt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.prompt i {
+  display: block;
+}
+.prompt i img {
+  display: block;
+}
+.prompt1 {
+  background-color: #fdecea;
+  color: #611a15;
+}
+.prompt2 {
+  background-color: #fff4e5;
+  color: #663c00;
+}
+.prompt3 {
+  background-color: #e8f4fd;
+  color: #0d3c61;
+}
+.prompt4 {
+  background-color: #edf7ed;
+  color: #1e4620;
+}
+
+.titleN span.CloRed,
+.CloRed {
+  color: #ca2420;
+  font-weight: 500;
+}
+@media screen and (min-width: 1680px) {
+  /*弹出*/
+  .TcKJ {
+    width: 54%;
+    padding: 1px 0 12px;
+    top: 18%;
+    border-radius: 6px;
+  }
+  .TcTit {
+    border-bottom: 1px solid #e5e5e5;
+    height: 60px;
+    width: 95%;
+  }
+  .TcTit h3 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .TcTab {
+    width: 95%;
+    margin: 17px auto 0;
+    border-radius: 5px;
+  }
+  .TcTab tr th {
+    font-size: 16px;
+    line-height: 20px;
+    height: 50px;
+  }
+  .TcTab tr td {
+    font-size: 14px;
+    line-height: 17px;
+    height: 50px;
+  }
+  .TcNBut {
+    width: 95%;
+    margin: 12px auto 0;
+  }
+  .TcNButa {
+    width: 82px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  /**/
+  .prompt {
+    border-radius: 5px;
+    width: 94%;
+    padding: 14px 3%;
+  }
+  .prompt i {
+    width: 4%;
+  }
+  .prompt i img {
+    width: 22px;
+  }
+  .prompt p {
+    width: 96%;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 1679px) and (min-width: 1400px) {
+  /*弹出*/
+  .TcKJ {
+    width: 54%;
+    padding: 1px 0 11px;
+    top: 18%;
+    border-radius: 5px;
+  }
+  .TcTit {
+    border-bottom: 1px solid #e5e5e5;
+    height: 54px;
+    width: 95%;
+  }
+  .TcTit h3 {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .TcTab {
+    width: 95% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse;
+    margin: 14px auto 0;
+    border-radius: 5px;
+    display: block;
+  }
+  .TcTab tr th {
+    font-size: 15px;
+    line-height: 18px;
+    height: 46px;
+  }
+  .TcTab tr td {
+    font-size: 13px;
+    line-height: 16px;
+    height: 46px;
+  }
+  .TcNBut {
+    width: 95%;
+    margin: 11px auto 0;
+  }
+  .TcNButa {
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+
+  /**/
+  .prompt {
+    border-radius: 4px;
+    width: 94%;
+    padding: 12px 3%;
+  }
+  .prompt i {
+    width: 4%;
+  }
+  .prompt i img {
+    width: 20px;
+  }
+  .prompt p {
+    width: 96%;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 1399px) and (min-width: 1280px) {
+  /*弹出*/
+  .TcKJ {
+    width: 54%;
+    padding: 2px 0 11px;
+    top: 18%;
+    border-radius: 4px;
+  }
+  .TcTit {
+    border-bottom: 1px solid #e5e5e5;
+    height: 48px;
+    width: 95%;
+  }
+  .TcTit h3 {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .TcTab {
+    width: 95%;
+    margin: 12px auto 0;
+    border-radius: 5px;
+  }
+  .TcTab tr th {
+    font-size: 14px;
+    line-height: 16px;
+    height: 40px;
+  }
+  .TcTab tr td {
+    font-size: 12px;
+    line-height: 14px;
+    height: 40px;
+  }
+  .TcNBut {
+    width: 95%;
+    margin: 11px auto 0;
+  }
+  .TcNButa {
+    width: 75px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  /**/
+  .prompt {
+    border-radius: 4px;
+    width: 94%;
+    padding: 12px 3%;
+  }
+  .prompt i {
+    width: 4%;
+  }
+  .prompt i img {
+    width: 18px;
+  }
+  .prompt p {
+    width: 96%;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 960px) {
+  /*弹出*/
+  .TcKJ {
+    width: 60%;
+    padding: 2px 0 11px;
+    top: 18%;
+    border-radius: 4px;
+  }
+  .TcTit {
+    border-bottom: 1px solid #e5e5e5;
+    height: 48px;
+    width: 95%;
+  }
+  .TcTit h3 {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .TcTab {
+    width: 95%;
+    margin: 12px auto 0;
+    border-radius: 5px;
+    display: block;
+  }
+  .TcTab tr th {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 3px 0;
+  }
+  .TcTab tr td {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 3px 0;
+  }
+  .TcNBut {
+    width: 95%;
+    margin: 11px auto 0;
+  }
+  .TcNButa {
+    width: 75px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  /**/
+  .prompt {
+    border-radius: 4px;
+    width: 94%;
+    padding: 12px 3%;
+  }
+  .prompt i {
+    width: 4%;
+  }
+  .prompt i img {
+    width: 18px;
+  }
+  .prompt p {
+    width: 96%;
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 960px) {
+  /*弹出*/
+  .TcKJ {
+    width: 90%;
+    padding: 2px 0 11px;
+    top: 18%;
+    border-radius: 4px;
+  }
+  .TcTit {
+    border-bottom: 1px solid #e5e5e5;
+    height: 48px;
+    width: 95%;
+  }
+  .TcTit h3 {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .TcTab {
+    width: 95%;
+    margin: 12px auto 0;
+    border-radius: 5px;
+    display: block;
+    overflow: auto;
+  }
+  .TcTab tr th {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 3px 0;
+  }
+  .TcTab tr td {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 3px 0;
+  }
+  .TcNBut {
+    width: 95%;
+    margin: 11px auto 0;
+  }
+  .TcNButa {
+    width: 75px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  /**/
+  .prompt {
+    border-radius: 4px;
+    width: 94%;
+    padding: 12px 3%;
+  }
+  .prompt i {
+    width: 4%;
+  }
+  .prompt i img {
+    width: 18px;
+  }
+  .prompt p {
+    width: 96%;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
